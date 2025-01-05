@@ -15,7 +15,7 @@ app.post('/sendmail', async (req, res, next) => {
     try {
         console.log("hello");
         const { email, name, contact, message, url } = req.body;
-        sendmailfunc({ email, name, contact, message, url });
+        await sendmailfunc({ email, name, contact, message, url });
         return res.json('sendmail')
     } catch (err) {
         console.log("error",err)

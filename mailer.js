@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 
 // Email options
 
-module.exports.sendmailfunc = (data) => {
+module.exports.sendmailfunc = async (data) => {
   const mailOptions = {
     from: '9dotparth@gmail.com', // Sender address
     to: 'parthdhaduk.infoservice@gmail.com', // Recipient's email
@@ -43,11 +43,12 @@ module.exports.sendmailfunc = (data) => {
   };
   
   // Send email
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error('Error:', error);
-    } else {
-      console.log('Email sent:', info.response);
-    }
-  });
+  try {
+    console.log('Email sent before:', send.response);
+    const send = await transporter.sendMail(mailOptions);
+    console.log('Email sent:', send.response);
+  } catch (err) {
+    console.log('Email Error',err)
+  }
+
 }
