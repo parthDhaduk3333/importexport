@@ -19,7 +19,7 @@ app.post('/sendmail', async (req, res, next) => {
         return res.json('sendmail')
     } catch (err) {
         console.log("error",err)
-        return res.json(err)
+        return res.status(400).json(err)
     }
 })
 

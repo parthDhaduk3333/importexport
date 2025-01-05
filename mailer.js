@@ -44,7 +44,7 @@ module.exports.sendmailfunc = async (data) => {
   
   // Send email
   try {
-    console.log('Email sent before:', send.response);
+    console.log('Email sent before:');
     const send = await transporter.sendMail(mailOptions);
     console.log('Email sent:', send.response);
   } catch (err) {
