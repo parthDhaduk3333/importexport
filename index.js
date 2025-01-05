@@ -13,12 +13,12 @@ app.use(express.json());
 
 app.post('/sendmail', async (req, res, next) => {
     try {
-        console.log("hello ");
+        console.log("hello");
         const { email, name, contact, message, url } = req.body;
         sendmailfunc({ email, name, contact, message, url });
         return res.json('sendmail')
     } catch (err) {
-        console.log(err)
+        console.log("error",err)
         return res.json(err)
     }
 })
