@@ -18,6 +18,7 @@ app.post('/sendmail', async (req, res, next) => {
         sendmailfunc({ email, name, contact, message, url });
         return res.json('sendmail')
     } catch (err) {
+        console.log(err)
         return res.json(err)
     }
 })
