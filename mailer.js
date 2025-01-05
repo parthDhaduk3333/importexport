@@ -38,7 +38,7 @@ module.exports.sendmailfunc = (data) => {
                     <h3>
                         Product : 
                     </h3>
-                    ${!fromContact ? `<a href="${data.url}">See Product</a>` : "From Contact Us Page"}
+                    ${`<a href="${data.url}">See Product</a>`}
   `, // HTML body
   };
   
