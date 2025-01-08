@@ -6,8 +6,8 @@ const transporter = nodemailer.createTransport({
   port: 587, // For TLS
   secure: false, // true for 465, false for other ports
   auth: {
-    user: 'yamiparth3333@gmail.com', // Your Gmail address
-    pass: 'iujh hzkq gvut hamy'
+    user: 'integroexim007@gmail.com', // Your Gmail address
+    pass: 'ygoc dnle pcdz wwsb'
   },
 });
 
@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 
 module.exports.sendmailfunc = async (data) => {
   const mailOptions = {
-    from: 'yamiparth3333@gmail.com', // Sender address
+    from: 'integroexim007@gmail.com', // Sender address
     to: 'info@integroexim.com', // Recipient's email
     subject: 'Inqury for the product', // Subject line
     html: `
